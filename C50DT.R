@@ -6,7 +6,7 @@ library(tree)
 students.df <- read.csv(file.choose())
 students.df$Final.Grade = as.factor(students.df$Final.Grade)
 
-#Split iris data into train and test
+#Split data into train and test
 train.indices <- sample(1:nrow(students.df), 100)
 students.df.train <- students.df[train.indices, ]
 students.df.test <- students.df[-train.indices, ]
